@@ -6,12 +6,12 @@ WORKDIR /workspace
 COPY specification /specification
 
 # 2. Pre-cache teststate-client-java dependencies
-COPY implementation/client/client-java/pom.xml /workspace/teststate-client-java/
-WORKDIR /workspace/teststate-client-java
+COPY implementation/client/client-java/pom.xml /workspace/client-java/
+WORKDIR /workspace/client-java
 RUN mvn dependency:go-offline -B || true
 
 # 3. Build teststate-client-java library
-COPY implementation/client/client-java/src /workspace/teststate-client-java/src
+COPY implementation/client/client-java/src /workspace/client-java/src
 RUN mvn install -DskipTests
 
 # 4. Pre-cache agent dependencies
