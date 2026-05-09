@@ -1,4 +1,4 @@
-import {Agent} from "testgenesis-client-node";
+import {Agent} from "teststate-client-node";
 import {parseArgs} from "node:util";
 import {ExampleProcessor} from "./processor.js";
 

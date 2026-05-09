@@ -1,6 +1,6 @@
-package me.hsgamer.testgenesis.agent;
+package me.hsgamer.teststate.agent;
 
-import me.hsgamer.testgenesis.client.Agent;
+import me.hsgamer.teststate.client.Agent;
 
 import java.util.logging.Logger;
 

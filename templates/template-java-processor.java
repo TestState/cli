@@ -1,17 +1,17 @@
-package me.hsgamer.testgenesis.agent;
+package me.hsgamer.teststate.agent;
 
 import com.google.protobuf.Struct;
 import com.google.protobuf.Value;
-import me.hsgamer.testgenesis.client.context.TestSessionContext;
-import me.hsgamer.testgenesis.client.processor.TestSessionProcessor;
-import me.hsgamer.testgenesis.client.utils.UapUtils;
-import me.hsgamer.testgenesis.uap.v1.PayloadRequirement;
-import me.hsgamer.testgenesis.uap.v1.Severity;
-import me.hsgamer.testgenesis.uap.v1.Summary;
-import me.hsgamer.testgenesis.uap.v1.TestCapability;
-import me.hsgamer.testgenesis.uap.v1.TestResult;
-import me.hsgamer.testgenesis.uap.v1.TestState;
-import me.hsgamer.testgenesis.uap.v1.TestStatus;
+import me.hsgamer.teststate.client.context.TestSessionContext;
+import me.hsgamer.teststate.client.processor.TestSessionProcessor;
+import me.hsgamer.teststate.client.utils.UapUtils;
+import me.hsgamer.teststate.uap.v1.PayloadRequirement;
+import me.hsgamer.teststate.uap.v1.Severity;
+import me.hsgamer.teststate.uap.v1.Summary;
+import me.hsgamer.teststate.uap.v1.TestCapability;
+import me.hsgamer.teststate.uap.v1.TestResult;
+import me.hsgamer.teststate.uap.v1.TestState;
+import me.hsgamer.teststate.uap.v1.TestStatus;
 
 import java.util.logging.Logger;
 

@@ -6,12 +6,12 @@ WORKDIR /workspace
 COPY specification /specification
 
 # 2. Pre-cache shared library dependencies
-COPY implementation/client/testgenesis-client-node/package*.json /workspace/testgenesis-client-node/
-WORKDIR /workspace/testgenesis-client-node
+COPY implementation/client/teststate-client-node/package*.json /workspace/teststate-client-node/
+WORKDIR /workspace/teststate-client-node
 RUN npm install
 
 # 3. Build shared library
-COPY implementation/client/testgenesis-client-node /workspace/testgenesis-client-node
+COPY implementation/client/teststate-client-node /workspace/teststate-client-node
 RUN npm run build
 
 # 4. Pre-cache agent dependencies
@@ -28,7 +28,7 @@ FROM node:22-slim
 WORKDIR /app
 
 # Copy built library and agent
-COPY --from=build /workspace/testgenesis-client-node /app/testgenesis-client-node
+COPY --from=build /workspace/teststate-client-node /app/teststate-client-node
 COPY --from=build /workspace/agent /app/agent
 
 WORKDIR /app/agent

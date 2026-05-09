@@ -15,10 +15,10 @@
     </properties>
 
     <dependencies>
-        <!-- TestGenesis Client -->
+        <!-- TestState Client -->
         <dependency>
             <groupId>me.hsgamer</groupId>
-            <artifactId>testgenesis-client-java</artifactId>
+            <artifactId>teststate-client-java</artifactId>
             <version>${client.version}</version>
         </dependency>
 
@@ -54,7 +54,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>me.hsgamer.testgenesis.agent.AgentApp</mainClass>
+                            <mainClass>me.hsgamer.teststate.agent.AgentApp</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
@@ -64,7 +64,7 @@
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>3.5.0</version>
                 <configuration>
-                    <mainClass>me.hsgamer.testgenesis.agent.AgentApp</mainClass>
+                    <mainClass>me.hsgamer.teststate.agent.AgentApp</mainClass>
                 </configuration>
             </plugin>
             <plugin>

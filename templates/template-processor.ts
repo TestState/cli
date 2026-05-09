@@ -10,7 +10,7 @@ import {
     timestampNow,
     msToDuration,
     cleanObject
-} from "testgenesis-client-node";
+} from "teststate-client-node";
 
 /**
  * Example processor implementation.

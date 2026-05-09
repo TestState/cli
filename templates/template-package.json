@@ -1,7 +1,7 @@
 {
   "name": "__name__",
   "version": "1.0.0",
-  "description": "TestGenesis Client Agent",
+  "description": "TestState Client Agent",
   "type": "module",
   "main": "dist/index.js",
   "scripts": {
@@ -14,6 +14,6 @@
     "typescript": "^5.8.2"
   },
   "dependencies": {
-    "testgenesis-client-node": "file:../testgenesis-client-node"
+    "teststate-client-node": "file:../teststate-client-node"
   }
 }

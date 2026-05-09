@@ -5,13 +5,13 @@ WORKDIR /workspace
 # 1. Copy specification for proto generation
 COPY specification /specification
 
-# 2. Pre-cache testgenesis-client-java dependencies
-COPY implementation/client/testgenesis-client-java/pom.xml /workspace/testgenesis-client-java/
-WORKDIR /workspace/testgenesis-client-java
+# 2. Pre-cache teststate-client-java dependencies
+COPY implementation/client/teststate-client-java/pom.xml /workspace/teststate-client-java/
+WORKDIR /workspace/teststate-client-java
 RUN mvn dependency:go-offline -B || true
 
-# 3. Build testgenesis-client-java library
-COPY implementation/client/testgenesis-client-java/src /workspace/testgenesis-client-java/src
+# 3. Build teststate-client-java library
+COPY implementation/client/teststate-client-java/src /workspace/teststate-client-java/src
 RUN mvn install -DskipTests
 
 # 4. Pre-cache agent dependencies

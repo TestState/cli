@@ -36,12 +36,12 @@ const CONFIGS: Record<string, LangConfig> = {
         startCmd: "npm run start"
     },
     java: {
-        dirs: ["src/main/java/me/hsgamer/testgenesis/agent"],
+        dirs: ["src/main/java/me/hsgamer/teststate/agent"],
         files: [
             {template: "template-java-pom.xml", target: "pom.xml"},
             {template: "template-java-gitignore", target: ".gitignore"},
-            {template: "template-java-app.java", target: "src/main/java/me/hsgamer/testgenesis/agent/AgentApp.java"},
-            {template: "template-java-processor.java", target: "src/main/java/me/hsgamer/testgenesis/agent/ExampleProcessor.java"},
+            {template: "template-java-app.java", target: "src/main/java/me/hsgamer/teststate/agent/AgentApp.java"},
+            {template: "template-java-processor.java", target: "src/main/java/me/hsgamer/teststate/agent/ExampleProcessor.java"},
             {template: "template-java-dockerfile", target: "Dockerfile"},
         ],
         startCmd: "mvn exec:java"
@@ -57,7 +57,7 @@ function refreshAgentsJust() {
     const agents = items
         .filter(item => item.isDirectory())
         .map(item => item.name)
-        .filter(name => !name.startsWith("testgenesis-client-") && name !== "testgenesis-cli" && !name.startsWith("."));
+        .filter(name => !name.startsWith("teststate-client-") && name !== "teststate-cli" && !name.startsWith("."));
 
     let content = "# Generated Agents Justfile - DO NOT EDIT MANUALLY\n\n";
     
@@ -90,7 +90,7 @@ async function main() {
     }
 
     if (values.help || (positionals.length === 0 && !values.name)) {
-        console.log("Usage: testgenesis-gen [project-name]");
+        console.log("Usage: teststate-gen [project-name]");
         console.log("Options:");
         console.log("  -n, --name <name>  Name of the project");
         console.log("  -l, --lang <lang>  Language (ts, java) [default: ts]");
