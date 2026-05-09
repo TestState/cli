@@ -17,7 +17,7 @@ RUN npm run build
 # 4. Pre-cache agent dependencies
 WORKDIR /workspace/agent
 COPY package*.json /workspace/agent/
-RUN npm install
+RUN npm install /workspace/client-node --no-save && npm install
 
 # 5. Build agent
 COPY . /workspace/agent
