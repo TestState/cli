@@ -57,7 +57,7 @@ function refreshAgentsJust() {
     const agents = items
         .filter(item => item.isDirectory())
         .map(item => item.name)
-        .filter(name => !name.startsWith("teststate-client-") && name !== "teststate-cli" && !name.startsWith("."));
+        .filter(name => name !== "client-java" && name !== "client-node" && name !== "cli" && !name.startsWith("."));
 
     let content = "# Generated Agents Justfile - DO NOT EDIT MANUALLY\n\n";
     
