@@ -14,6 +14,6 @@
     "typescript": "^5.8.2"
   },
   "dependencies": {
-    "teststate-client-node": "file:../teststate-client-node"
+    "teststate-client-node": "file:../client-node"
   }
 }

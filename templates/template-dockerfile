@@ -6,12 +6,12 @@ WORKDIR /workspace
 COPY specification /specification
 
 # 2. Pre-cache shared library dependencies
-COPY implementation/client/teststate-client-node/package*.json /workspace/teststate-client-node/
+COPY implementation/client/client-node/package*.json /workspace/teststate-client-node/
 WORKDIR /workspace/teststate-client-node
 RUN npm install
 
 # 3. Build shared library
-COPY implementation/client/teststate-client-node /workspace/teststate-client-node
+COPY implementation/client/client-node /workspace/teststate-client-node
 RUN npm run build
 
 # 4. Pre-cache agent dependencies
